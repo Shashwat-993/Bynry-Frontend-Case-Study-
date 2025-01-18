@@ -1,30 +1,47 @@
-# Profile Explorer
-https://super-pastelito-ea7f39.netlify.app/ use this link to access the web app prototype.
-A beautiful, interactive web application for exploring user profiles with an integrated map view. Built with React, TypeScript, and Leaflet maps.
+# 🌍 Profile Explorer  
 
-![Profile Explorer Screenshot](https://i.imgur.com/YourScreenshot.jpg)
+[Live Demo](https://super-pastelito-ea7f39.netlify.app/)  
+A beautiful, interactive web application for exploring user profiles with an integrated map view. Built with **React**, **TypeScript**, and **Leaflet** maps.  
 
-## 🌟 Features
+![Profile Explorer Screenshot](https://i.imgur.com/YourScreenshot.jpg)  
 
-- **Interactive Map View**: Visualize profile locations on an interactive map
-- **Profile List**: Browse through profiles with detailed information
-- **Search Functionality**: Search profiles by name, location, or interests
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Multiple View Modes**:
-  - Split View (Map + List)
-  - List View
-  - Map View
-- **Profile Details**: View comprehensive profile information in a modal
-- **Real-time Updates**: Profile markers update on the map as you browse
+---
 
-## 🚀 Tech Stack
+## 🌟 Features  
 
-- **Frontend Framework**: React with TypeScript
-- **Styling**: Tailwind CSS for modern, responsive design
-- **Map Integration**: Leaflet for interactive maps
-- **Icons**: Lucide React for beautiful, consistent icons
-- **Database**: Supabase for data storage and authentication
-- **Deployment**: Netlify for hosting
+- **Interactive Map View**: Visualize profile locations dynamically.  
+- **Profile List**: Browse profiles with detailed information like name, description, and more.  
+- **Search & Filter**: Find profiles quickly by name, location, or interests.  
+- **Multiple View Modes**:  
+  - Split View (Map + List)  
+  - List View  
+  - Map View  
+- **Responsive Design**: Seamlessly works on desktop and mobile.  
+- **Profile Details Modal**: Explore additional details in an intuitive modal.  
+- **Real-time Updates**: Markers and list update dynamically as you navigate.  
+
+---
+
+## 🚀 Tech Stack  
+
+- **Frontend Framework**: React with TypeScript.  
+- **Styling**: Tailwind CSS for sleek and responsive design.  
+- **Map Integration**: Leaflet for powerful, interactive mapping.  
+- **Icons**: Lucide React for consistent, aesthetic icons.  
+- **Database**: Supabase for storage and authentication.  
+- **Deployment**: Netlify for hassle-free hosting.  
+
+---
+
+## 🏗️ Local Development  
+
+Follow these steps to set up the project locally:  
+
+1. **Clone the repository**:  
+   ```bash  
+   git clone https://github.com/yourusername/profile-explorer.git  
+   cd profile-explorer  
+
 
 ## 💻 Local Development
 
