@@ -32,17 +32,6 @@ A beautiful, interactive web application for exploring user profiles with an int
 - **Deployment**: Netlify for hassle-free hosting.  
 
 ---
-
-## 🏗️ Local Development  
-
-Follow these steps to set up the project locally:  
-
-1. **Clone the repository**:  
-   ```bash  
-   git clone https://github.com/yourusername/profile-explorer.git  
-   cd profile-explorer  
-
-
 ## 💻 Local Development
 
 1. Clone the repository:
