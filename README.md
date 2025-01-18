@@ -1,191 +1,114 @@
-# Profile Map Explorer
+# Profile Explorer
 
-A React-based web application that allows users to view and manage profiles while exploring their locations on an interactive map. This project was developed as part of the BYNRY Frontend Case Study.
+A beautiful, interactive web application for exploring user profiles with an integrated map view. Built with React, TypeScript, and Leaflet maps.
+
+![Profile Explorer Screenshot](https://i.imgur.com/YourScreenshot.jpg)
 
 ## 🌟 Features
 
-- **Profile Management**
-  - View list of profiles with details
-  - Add, edit, and delete profiles through admin panel
-  - Search and filter profiles by name or location
-  - Detailed profile view with extended information
-
-- **Interactive Map Integration**
-  - View profile locations on an interactive map
-  - Click markers to view profile details
-  - Summary view showing profile location
-  - Integrated with OpenStreetMap (easily switchable to Google Maps/Mapbox)
-
-- **User Experience**
-  - Responsive design for all devices
-  - Loading indicators for async operations
-  - Error handling and validation
-  - Intuitive navigation and interface
+- **Interactive Map View**: Visualize profile locations on an interactive map
+- **Profile List**: Browse through profiles with detailed information
+- **Search Functionality**: Search profiles by name, location, or interests
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Multiple View Modes**:
+  - Split View (Map + List)
+  - List View
+  - Map View
+- **Profile Details**: View comprehensive profile information in a modal
+- **Real-time Updates**: Profile markers update on the map as you browse
 
 ## 🚀 Tech Stack
 
-- React 18
-- TypeScript
-- React Router v6
-- React-Leaflet for mapping
-- Tailwind CSS for styling
-- shadcn/ui for UI components
+- **Frontend Framework**: React with TypeScript
+- **Styling**: Tailwind CSS for modern, responsive design
+- **Map Integration**: Leaflet for interactive maps
+- **Icons**: Lucide React for beautiful, consistent icons
+- **Database**: Supabase for data storage and authentication
+- **Deployment**: Netlify for hosting
 
-## 📦 Project Structure
-
-```
-src/
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── loading.tsx
-├── components/
-│   ├── ProfileList/
-│   ├── ProfileCard/
-│   ├── Map/
-│   ├── AdminPanel/
-│   ├── LoadingIndicator/
-│   └── ui/
-├── services/
-│   └── api.ts
-├── types/
-│   └── index.ts
-└── utils/
-    └── helpers.ts
-```
-
-## 🛠️ Setup and Installation
+## 💻 Local Development
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/profile-map-explorer.git
-   ```
-
-2. Install dependencies:
-   ```bash
-   cd profile-map-explorer
-   npm install
-   ```
-
-3. Create a `.env` file with required environment variables:
-   ```
-   NEXT_PUBLIC_MAP_API_KEY=your_map_api_key
-   ```
-
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-## 💻 Usage
-
-### User Interface
-
-1. **Browse Profiles**
-   - View all profiles on the home page
-   - Use search bar to filter profiles
-   - Click on profile cards to view details
-
-2. **Map Interaction**
-   - Click "View on Map" to see profile location
-   - Interact with map markers for quick info
-   - Use zoom controls for better navigation
-
-3. **Admin Panel**
-   - Access admin panel through "/admin" route
-   - Add new profiles with required information
-   - Edit existing profiles
-   - Delete profiles when needed
-
-### API Integration
-
-The application uses a RESTful API for data management. Key endpoints:
-
-- GET /api/profiles - Fetch all profiles
-- GET /api/profiles/:id - Fetch specific profile
-- POST /api/profiles - Create new profile
-- PUT /api/profiles/:id - Update profile
-- DELETE /api/profiles/:id - Delete profile
-
-## 🎯 Key Requirements Met
-
-1. ✅ Profile Display
-   - Implemented profile cards with essential information
-   - Responsive grid layout
-   - Efficient data loading
-
-2. ✅ Interactive Mapping
-   - Integrated map component
-   - Dynamic marker placement
-   - Smooth interaction handling
-
-3. ✅ Summary Integration
-   - One-click location view
-   - Seamless map integration
-   - Quick profile overview
-
-4. ✅ User Experience
-   - Intuitive navigation
-   - Responsive design
-   - Loading states
-   - Error handling
-
-5. ✅ Admin Functionality
-   - Secure admin panel
-   - CRUD operations
-   - Form validation
-
-## 📱 Responsive Design
-
-The application is fully responsive and tested on:
-- Desktop (1920px and above)
-- Laptop (1024px to 1919px)
-- Tablet (768px to 1023px)
-- Mobile (320px to 767px)
-
-## 🔒 Error Handling
-
-- Form validation with error messages
-- API error handling with user feedback
-- Fallback UI for failed data loading
-- Network error detection
-
-## 🚦 Loading States
-
-- Skeleton loaders for profile cards
-- Progress indicators for map loading
-- Loading states for form submissions
-- Smooth transitions between states
-
-## 🧪 Testing
-
-Run tests using:
 ```bash
-npm run test
+git clone https://github.com/yourusername/profile-explorer.git
+cd profile-explorer
 ```
 
-Tests cover:
-- Component rendering
-- User interactions
-- API integration
-- Error scenarios
+2. Install dependencies:
+```bash
+npm install
+```
 
-## 📈 Future Improvements
+3. Create a `.env` file in the root directory and add your Supabase credentials:
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-1. Add authentication system
-2. Implement real-time updates
-3. Add profile image upload
-4. Enhance map features
-5. Add data export functionality
+4. Start the development server:
+```bash
+npm run dev
+```
 
-## 📄 License
+5. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🏗️ Project Structure
+
+```
+profile-explorer/
+├── src/
+│   ├── components/         # React components
+│   │   ├── Map.tsx        # Map component with Leaflet integration
+│   │   ├── ProfileList.tsx # Profile listing component
+│   │   └── ...
+│   ├── types/             # TypeScript type definitions
+│   ├── App.tsx            # Main application component
+│   └── main.tsx          # Application entry point
+├── public/               # Static assets
+└── supabase/            # Supabase configurations and migrations
+```
+
+## 🔐 Database Schema
+
+The application uses the following database structure:
+
+```sql
+profiles
+├── id (uuid, primary key)
+├── name (text)
+├── photo (text)
+├── description (text)
+├── address (text)
+├── latitude (double precision)
+├── longitude (double precision)
+├── created_at (timestamptz)
+└── user_id (uuid, references auth.users)
+```
+
+## 🚀 Deployment
+
+The application is deployed on Netlify. To deploy your own instance:
+
+1. Fork this repository
+2. Connect your fork to Netlify
+3. Set up the required environment variables in Netlify:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create a new branch: `git checkout -b feature-name`
+3. Make your changes
+4. Push to your fork: `git push origin feature-name`
+5. Submit a pull request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Profile photos from [Unsplash](https://unsplash.com)
+- Map data from [OpenStreetMap](https://www.openstreetmap.org)
+- Icons from [Lucide](https://lucide.dev)
